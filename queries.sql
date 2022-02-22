@@ -102,5 +102,10 @@ SELECT species FROM animals;
  
  
  
- 
 -- (10 rows)
+
+--  Inside a transaction Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
+
+BEGIN;
+-- BEGIN
+
