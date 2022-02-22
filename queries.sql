@@ -191,4 +191,9 @@ SET
 
 ROLLBACK TO SAVEPOINT my_savepoint;
 -- ROLLBACK
-
+UPDATE animals
+SET
+  weight_kg = weight_kg * -1
+WHERE
+  weight_kg < 0;
+-- UPDATE 3
