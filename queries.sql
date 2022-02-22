@@ -138,4 +138,7 @@ SELECT species FROM animals;
 --  pokemon
 -- (10 rows)
 
+--  Inside a transaction delete all records in the animals table, then roll back the transaction
 
+BEGIN;
+-- BEGIN
