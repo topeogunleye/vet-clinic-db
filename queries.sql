@@ -67,3 +67,40 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 --   3 | Pikachu | 2021-01-07    |               1 | f        |     15.04
 --   4 | Devimon | 2017-05-12    |               5 | t        |        11
 -- (2 rows)
+
+-- Inside a transaction update the animals table by setting the species column to unspecified
+-- for all animals.
+-- Verify that change was made. Then roll back the change and verify that species columns went back to the state before transaction.
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+-- UPDATE 10
+SELECT species FROM animals;
+--    species   
+-- -------------
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+--  unspecified
+-- (10 rows)
+
+ROLLBACK;
+-- ROLLBACK
+SELECT species FROM animals;
+--  species 
+-- ---------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+-- (10 rows)
