@@ -238,4 +238,15 @@ FROM
     animals
 GROUP BY neutered;
 
+SELECT 
+    MIN(weight_kg), MAX(weight_kg)
+FROM 
+    animals
+GROUP BY species;
+--  min | max 
+-- -----+-----
+--   11 |  17
+--    8 |  45
+-- (2 rows)
+
 
