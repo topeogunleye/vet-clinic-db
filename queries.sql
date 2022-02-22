@@ -215,6 +215,15 @@ SELECT COUNT(*) FROM animals;
 --      9
 -- (1 row)
 
-
+SELECT 
+  COUNT(escape_attempts) 
+FROM 
+  animals
+WHERE 
+  escape_attempts = 0;
+--  count 
+-- -------
+--      2
+-- (1 row)
 
 
