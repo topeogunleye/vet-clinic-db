@@ -142,3 +142,5 @@ SELECT species FROM animals;
 
 BEGIN;
 -- BEGIN
+TRUNCATE TABLE animals;
+-- TRUNCATE TABLE
