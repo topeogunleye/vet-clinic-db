@@ -226,4 +226,10 @@ WHERE
 --      2
 -- (1 row)
 
+SELECT AVG(weight_kg) FROM animals;
+--          avg         
+-- ---------------------
+--  16.6444444444444444
+-- (1 row)
 
+SELECT MAX()
