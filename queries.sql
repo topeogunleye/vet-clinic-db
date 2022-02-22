@@ -121,4 +121,21 @@ UPDATE animals SET  species = 'pokemon' WHERE species IS NULL;
 COMMIT;
 -- COMMIT
 
+-- Verify that change was made and persists after commit.
+SELECT species FROM animals;
+
+--  species 
+-- ---------
+--  digimon
+--  digimon
+--  digimon
+--  digimon
+--  digimon
+--  digimon
+--  pokemon
+--  pokemon
+--  pokemon
+--  pokemon
+-- (10 rows)
+
 
