@@ -233,10 +233,15 @@ SELECT AVG(weight_kg) FROM animals;
 -- (1 row)
 
 SELECT
-    MAX(escape_attempts)
+    neutered, MAX(escape_attempts)
 FROM
     animals
-GROUP BY neutered;
+GROUP BY neutered
+ORDER BY MAX(escape_attempts) DESC limit 1;
+--  neutered | max 
+-- ----------+-----
+--  t        |   7
+-- (1 row)
 
 SELECT 
     MIN(weight_kg), MAX(weight_kg)
