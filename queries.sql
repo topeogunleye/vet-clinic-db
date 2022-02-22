@@ -197,3 +197,5 @@ SET
 WHERE
   weight_kg < 0;
 -- UPDATE 3
+
+COMMIT;
