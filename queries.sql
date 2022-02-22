@@ -199,3 +199,22 @@ WHERE
 -- UPDATE 3
 
 COMMIT;
+
+-- Write queries to answer the following questions:
+
+-- How many animals are there?
+-- How many animals have never tried to escape?
+-- What is the average weight of animals?
+-- Who escapes the most, neutered or not neutered animals?
+-- What is the minimum and maximum weight of each type of animal?
+-- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+
+SELECT COUNT(*) FROM animals;
+--  count 
+-- -------
+--      9
+-- (1 row)
+
+
+
+
