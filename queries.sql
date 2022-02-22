@@ -232,4 +232,10 @@ SELECT AVG(weight_kg) FROM animals;
 --  16.6444444444444444
 -- (1 row)
 
-SELECT MAX()
+SELECT
+    MAX(escape_attempts)
+FROM
+    animals
+GROUP BY neutered;
+
+
