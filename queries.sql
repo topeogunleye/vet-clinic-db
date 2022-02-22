@@ -109,3 +109,7 @@ SELECT species FROM animals;
 BEGIN;
 -- BEGIN
 
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+-- UPDATE 6
+
+
