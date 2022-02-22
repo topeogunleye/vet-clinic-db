@@ -117,3 +117,8 @@ UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 UPDATE animals SET  species = 'pokemon' WHERE species IS NULL;
 -- UPDATE 4
 
+-- Commit the transaction.
+COMMIT;
+-- COMMIT
+
+
