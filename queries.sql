@@ -181,3 +181,7 @@ WHERE
   date_of_birth > '2022-01-01';
 -- DELETE 1
 
+SAVEPOINT my_savepoint;
+-- SAVEPOINT
+
+
