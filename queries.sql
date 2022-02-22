@@ -184,4 +184,9 @@ WHERE
 SAVEPOINT my_savepoint;
 -- SAVEPOINT
 
+UPDATE animals
+SET
+  weight_kg = weight_kg * -1;
+-- UPDATE 9
+
 
