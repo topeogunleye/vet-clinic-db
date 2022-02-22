@@ -189,4 +189,6 @@ SET
   weight_kg = weight_kg * -1;
 -- UPDATE 9
 
+ROLLBACK TO SAVEPOINT my_savepoint;
+-- ROLLBACK
 
