@@ -45,3 +45,5 @@ ALTER TABLE animals
 ADD COLUMN species_id INTEGER
 WHERE name LIKE '%mon'
 SET species_id = 'Digimon'
+WHERE name NOT LIKE '%mon'
+SET species_id = 'Pokemon';
