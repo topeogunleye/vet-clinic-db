@@ -57,4 +57,5 @@ SET species_id = 'Pokemon';
 
 ALTER TABLE animals
 ADD COLUMN owner_id INTEGER
-WHERE name LIKE '%mon'
+SET owner_id = 'Sam-Smith'
+WHERE name LIKE 'Agumon'
