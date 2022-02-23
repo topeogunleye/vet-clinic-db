@@ -305,3 +305,10 @@ FROM
   animals
 WHERE
   owner_id = 2 AND species = 'Digimon';
+
+SELECT
+  name
+FROM  
+  animals
+WHERE
+  owner_id = 4 AND escape_attempts = 0;
