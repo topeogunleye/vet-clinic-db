@@ -29,4 +29,9 @@ INSERT INTO owners (name, age) VALUES
 ('Dean Winchester', 14),
 ('Jodie Whittaker', 38);
 
+-- Insert the following data into the species table:
+-- Pokemon
+-- Digimon
 
+INSERT INTO species (name) VALUES
+('Pokemon'),
