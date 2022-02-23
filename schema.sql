@@ -30,3 +30,12 @@ ADD species varchar(150);
 --  species         | character varying(255) |           |          | 
 -- Indexes:
 --     "animals_pkey" PRIMARY KEY, btree (id)
+
+-- Create a table named owners with the following columns:
+-- id: integer (set it as autoincremented PRIMARY KEY)
+-- full_name: string
+-- age: integer
+
+CREATE TABLE owners (
+    
+);
