@@ -43,3 +43,5 @@ INSERT INTO species (name) VALUES
 
 ALTER TABLE animals
 ADD COLUMN species_id INTEGER
+WHERE name LIKE '%mon'
+SET species_id = 'Digimon'
