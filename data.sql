@@ -61,6 +61,9 @@ SET owner_id = 1
 WHERE name LIKE 'Agumon'
 SET owner_id = 2
 WHERE name LIKE 'Gabumon' AND name LIKE 'Pikachu'
+SET owner_id = 3
+WHERE name LIKE 'Devimon' AND name LIKE 'Plantmon'
+
 
 
 
