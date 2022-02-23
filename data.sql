@@ -47,3 +47,10 @@ WHERE name LIKE '%mon'
 SET species_id = 'Digimon'
 WHERE name NOT LIKE '%mon'
 SET species_id = 'Pokemon';
+
+-- Modify your inserted animals to include owner information (owner_id):
+-- Sam Smith owns Agumon.
+-- Jennifer Orwell owns Gabumon and Pikachu.
+-- Bob owns Devimon and Plantmon.
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
+-- Dean Winchester owns Angemon and Boarmon.
