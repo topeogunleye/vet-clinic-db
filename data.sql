@@ -21,5 +21,12 @@ INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg) VALU
 -- Dean Winchester 14 years old.
 -- Jodie Whittaker 38 years old.
 
+INSERT INTO owners (name, age) VALUES
+('Sam Smith', 34),
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
 
 
