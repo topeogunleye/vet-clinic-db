@@ -54,3 +54,7 @@ SET species_id = 'Pokemon';
 -- Bob owns Devimon and Plantmon.
 -- Melody Pond owns Charmander, Squirtle, and Blossom.
 -- Dean Winchester owns Angemon and Boarmon.
+
+ALTER TABLE animals
+ADD COLUMN owner_id INTEGER
+WHERE name LIKE '%mon'
