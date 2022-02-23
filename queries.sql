@@ -285,3 +285,10 @@ FROM
   animals
 WHERE
   species = 'pokemon';
+
+SELECT
+  owners.name, animals.name
+FROM
+  owners
+  JOIN animals
+  ON owners.id = animals.owner_id;
