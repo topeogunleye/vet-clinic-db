@@ -278,3 +278,10 @@ FROM
   animals
 WHERE
   owner_id = 4;
+
+SELECT
+  name, species
+FROM
+  animals
+WHERE
+  species = 'pokemon';
