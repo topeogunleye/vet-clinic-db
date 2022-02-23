@@ -59,6 +59,8 @@ ALTER TABLE animals
 ADD COLUMN owner_id INTEGER
 SET owner_id = 1
 WHERE name LIKE 'Agumon'
+SET owner_id = 2
+WHERE name LIKE 'Gabumon' AND name LIKE 'Pikachu'
 
 
 
