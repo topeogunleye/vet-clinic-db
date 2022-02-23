@@ -271,3 +271,10 @@ WHERE
 -- List all Digimon owned by Jennifer Orwell.
 -- List all animals owned by Dean Winchester that haven't tried to escape.
 -- Who owns the most animals?
+
+SELECT 
+  name, species
+FROM
+  animals
+WHERE
+  owner_id = 4;
