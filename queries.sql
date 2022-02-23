@@ -284,7 +284,7 @@ SELECT
 FROM
   animals
 WHERE
-  species = 'pokemon';
+  species = 'Pokemon';
 
 SELECT
   owners.name, animals.name
@@ -299,3 +299,9 @@ FROM
   animals
 GROUP BY species;
 
+SELECT 
+  name
+FROM
+  animals
+WHERE
+  owner_id = 2 AND species = 'Digimon';
