@@ -36,3 +36,7 @@ INSERT INTO owners (name, age) VALUES
 INSERT INTO species (name) VALUES
 ('Pokemon'),
 ('Digimon');
+
+-- Modify your inserted animals so it includes the species_id value:
+-- If the name ends in "mon" it will be Digimon
+-- All other animals are Pokemon
