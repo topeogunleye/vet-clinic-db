@@ -292,3 +292,10 @@ FROM
   owners
   JOIN animals
   ON owners.id = animals.owner_id;
+
+SELECT
+  species, COUNT(*)
+FROM
+  animals
+GROUP BY species;
+
