@@ -47,4 +47,5 @@ CREATE TABLE owners (
 -- name: string
 CREATE TABLE species (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
+    name varchar(100) NOT NULL
 );
