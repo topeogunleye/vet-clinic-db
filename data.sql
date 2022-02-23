@@ -35,3 +35,4 @@ INSERT INTO owners (name, age) VALUES
 
 INSERT INTO species (name) VALUES
 ('Pokemon'),
+('Digimon');
