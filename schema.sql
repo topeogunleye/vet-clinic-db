@@ -41,3 +41,8 @@ CREATE TABLE owners (
     full_name varchar(100) NOT NULL,
     age INT NOT NULL
 );
+
+-- Create a table named species with the following columns:
+CREATE TABLE species (
+
+)
