@@ -13,3 +13,20 @@ CREATE TABLE animals (
 -- --------+---------+-------+----------
 --  public | animals | table | postgres
 -- (1 row)
+
+ALTER TABLE animals  
+ADD species varchar(150);
+-- ALTER TABLE
+-- \d animals
+--                           Table "public.animals"
+--      Column      |          Type          | Collation | Nullable | Default 
+-- -----------------+------------------------+-----------+----------+---------
+--  id              | integer                |           | not null | 
+--  name            | character varying(100) |           | not null | 
+--  date_of_birth   | date                   |           | not null | 
+--  escape_attempts | integer                |           |          | 
+--  neutered        | boolean                |           |          | 
+--  weight_kg       | numeric                |           |          | 
+--  species         | character varying(255) |           |          | 
+-- Indexes:
+--     "animals_pkey" PRIMARY KEY, btree (id)
