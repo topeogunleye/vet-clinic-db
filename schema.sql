@@ -43,6 +43,8 @@ CREATE TABLE owners (
 );
 
 -- Create a table named species with the following columns:
+-- id: integer (set it as autoincremented PRIMARY KEY)
+-- name: string
 CREATE TABLE species (
-
-)
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
+);
