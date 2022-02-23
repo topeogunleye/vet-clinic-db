@@ -40,3 +40,6 @@ INSERT INTO species (name) VALUES
 -- Modify your inserted animals so it includes the species_id value:
 -- If the name ends in "mon" it will be Digimon
 -- All other animals are Pokemon
+
+ALTER TABLE animals
+ADD COLUMN species_id INTEGER
