@@ -13,5 +13,13 @@ INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg) VALU
 ('Boarmon', '2005-06-07', 7, true, '20.4'),
 ('Blossom', '1998-10-13', 3, true, '17');
 
+-- Insert the following data into the owners table:
+-- Sam Smith 34 years old.
+-- Jennifer Orwell 19 years old.
+-- Bob 45 years old.
+-- Melody Pond 77 years old.
+-- Dean Winchester 14 years old.
+-- Jodie Whittaker 38 years old.
+
 
 
