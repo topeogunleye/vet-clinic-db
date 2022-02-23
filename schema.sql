@@ -57,3 +57,4 @@ CREATE TABLE species (
 -- Add column owner_id which is a foreign key referencing the owners table
 
 ALTER TABLE animals
+DROP COLUMN species;
