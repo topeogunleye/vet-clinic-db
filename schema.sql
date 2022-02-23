@@ -37,5 +37,6 @@ ADD species varchar(150);
 -- age: integer
 
 CREATE TABLE owners (
-    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
+    full_name varchar(100) NOT NULL,
 );
