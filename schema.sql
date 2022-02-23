@@ -49,3 +49,9 @@ CREATE TABLE species (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
     name varchar(100) NOT NULL
 );
+
+-- Modify animals table:
+-- Make sure that id is set as autoincremented PRIMARY KEY
+-- Remove column species
+-- Add column species_id which is a foreign key referencing species table
+-- Add column owner_id which is a foreign key referencing the owners table
