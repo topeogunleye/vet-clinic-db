@@ -50,4 +50,17 @@ SET species_id = 1
 WHERE species_id IS NULL;
 COMMIT;
 
+-- Modify your inserted animals to include owner information (owner_id):
+-- Sam Smith owns Agumon.
+-- Jennifer Orwell owns Gabumon and Pikachu.
+-- Bob owns Devimon and Plantmon.
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
+-- Dean Winchester owns Angemon and Boarmon.
+
+-- Sam Smith owns Agumon.
+UPDATE animals 
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Sam Smith') 
+WHERE name = 'Agumon';
+
+
 
