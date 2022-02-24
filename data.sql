@@ -21,7 +21,7 @@ INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg) VALU
 -- Dean Winchester 14 years old.
 -- Jodie Whittaker 38 years old.
 
-INSERT INTO owners (name, age) VALUES
+INSERT INTO owners (full_name, age) VALUES
 ('Sam Smith', 34),
 ('Jennifer Orwell', 19),
 ('Bob', 45),
@@ -41,12 +41,11 @@ INSERT INTO species (name) VALUES
 -- If the name ends in "mon" it will be Digimon
 -- All other animals are Pokemon
 
-ALTER TABLE animals
-ADD COLUMN species_id INTEGER
-WHERE name LIKE '%mon'
+BEGIN;
+UPDATE animals
 SET species_id = 'Digimon'
-WHERE name NOT LIKE '%mon'
-SET species_id = 'Pokemon';
+WHERE name LIKE '%mon';
+
 
 -- Modify your inserted animals to include owner information (owner_id):
 -- Sam Smith owns Agumon.
@@ -57,15 +56,15 @@ SET species_id = 'Pokemon';
 
 ALTER TABLE animals
 ADD COLUMN owner_id INTEGER
-SET owner_id = 1
+SET owner_id = 'Sam-Smith';
 WHERE name LIKE 'Agumon'
-SET owner_id = 2
+SET owner_id = 'Jennifer-Orwell';
 WHERE name LIKE 'Gabumon' AND name LIKE 'Pikachu'
-SET owner_id = 3
+SET owner_id = 'Bob';
 WHERE name LIKE 'Devimon' AND name LIKE 'Plantmon'
-SET owner_id = 4
+SET owner_id = 'Melody-Pond';
 WHERE name LIKE 'Charmander' AND name LIKE 'Squirtle' AND name LIKE 'Blossom'
-SET owner_id = 5
+SET owner_id = "Dean-Winchester";
 WHERE name LIKE 'Angemon' AND name LIKE 'Boarmon';
 
 
