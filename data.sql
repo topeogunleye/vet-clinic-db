@@ -67,3 +67,10 @@ UPDATE animals
 SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell') 
 WHERE name = 'Pikachu' OR name = 'Gabumon';
 
+-- Melody Pond owns Charmander, Squirtle, and Blossom.
+
+UPDATE animals 
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Melody Pond') 
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+
+
