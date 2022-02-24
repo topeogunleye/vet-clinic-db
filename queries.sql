@@ -312,3 +312,12 @@ FROM
   animals
 WHERE
   owner_id = 4 AND escape_attempts = 0;
+
+SELECT
+  name
+FROM
+  owners
+  JOIN animals
+  ON owners.id = animals.owner_id
+GROUP BY owners.name
+ORDER BY COUNT(*) DESC LIMIT 1;
