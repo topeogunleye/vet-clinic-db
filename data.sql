@@ -45,7 +45,10 @@ BEGIN;
 UPDATE animals
 SET species_id = 'Digimon'
 WHERE name LIKE '%mon';
-
+UPDATE animals
+SET species_id = 'Pokemon'
+WHERE species_id IS NULL;
+COMMIT;
 
 -- Modify your inserted animals to include owner information (owner_id):
 -- Sam Smith owns Agumon.
