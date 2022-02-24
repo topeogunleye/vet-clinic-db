@@ -43,31 +43,11 @@ INSERT INTO species (name) VALUES
 
 BEGIN;
 UPDATE animals
-SET species_id = 'Digimon'
+SET species_id = 2
 WHERE name LIKE '%mon';
 UPDATE animals
-SET species_id = 'Pokemon'
+SET species_id = 1
 WHERE species_id IS NULL;
 COMMIT;
-
--- Modify your inserted animals to include owner information (owner_id):
--- Sam Smith owns Agumon.
--- Jennifer Orwell owns Gabumon and Pikachu.
--- Bob owns Devimon and Plantmon.
--- Melody Pond owns Charmander, Squirtle, and Blossom.
--- Dean Winchester owns Angemon and Boarmon.
-
-ALTER TABLE animals
-ADD COLUMN owner_id INTEGER
-SET owner_id = 'Sam-Smith';
-WHERE name LIKE 'Agumon'
-SET owner_id = 'Jennifer-Orwell';
-WHERE name LIKE 'Gabumon' AND name LIKE 'Pikachu'
-SET owner_id = 'Bob';
-WHERE name LIKE 'Devimon' AND name LIKE 'Plantmon'
-SET owner_id = 'Melody-Pond';
-WHERE name LIKE 'Charmander' AND name LIKE 'Squirtle' AND name LIKE 'Blossom'
-SET owner_id = "Dean-Winchester";
-WHERE name LIKE 'Angemon' AND name LIKE 'Boarmon';
 
 
