@@ -35,7 +35,7 @@ ADD species varchar(150);
 -- id: integer (set it as autoincremented PRIMARY KEY)
 -- full_name: string
 -- age: integer
-
+DROP TABLE IF EXISTS owners;
 CREATE TABLE owners (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
     full_name varchar(100) NOT NULL,
@@ -45,6 +45,7 @@ CREATE TABLE owners (
 -- Create a table named species with the following columns:
 -- id: integer (set it as autoincremented PRIMARY KEY)
 -- name: string
+DROP TABLE IF EXISTS species;
 CREATE TABLE species (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
     name varchar(100) NOT NULL
