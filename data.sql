@@ -85,21 +85,22 @@ WHERE name = 'Angemon' OR name = 'Boarmon';
 -- Vet Stephanie Mendez is 64 years old and graduated May 4th, 1981.
 -- Vet Jack Harkness is 38 years old and graduated Jun 8th, 2008.
 
-INSERT INTO vets (name, age, graduation_date) VALUES
+INSERT INTO vets (name, age, date_of_graduation) VALUES
 ('Vet William Tatcher', 45, '2000-04-23'),
 ('Vet Maisy Smith', 26, '2019-01-17'),
 ('Vet Stephanie Mendez', 64, '1981-05-04'),
 ('Vet Jack Harkness', 38, '2008-06-08');
 
--- Insert the following data for specialties:
+-- Insert the following data for specializations:
 -- Vet William Tatcher is specialized in Pokemon.
 -- Vet Stephanie Mendez is specialized in Digimon and Pokemon.
 -- Vet Jack Harkness is specialized in Digimon.
 
-INSERT INTO specializations (name, vet_id) VALUES
-('Pokemon', (SELECT id FROM vets WHERE name = 'Vet William Tatcher')),
-('Digimon', (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez')),
-('Digimon', (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'));
+INSERT INTO specializations (vet_id, species_id) VALUES
+(1, 1),
+(3, 2),
+(4, 2);
+
 
 -- Insert the following data for visits:
 -- Agumon visited William Tatcher on May 24th, 2020.
@@ -136,13 +137,13 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit) VALUES
 ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Vet William Tatcher'), '2020-08-10'),
 ((SELECT id FROM animals WHERE name = 'Plantmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2021-04-07'),
 ((SELECT id FROM animals WHERE name = 'Squirtle'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2019-09-29'),
-((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'), '2020-10-03');
+((SELECT id FROM animals WHERE name = 'Angemon'), (SELECT id FROM vets WHERE name = 'Vet Jack Harkness'), '2020-10-03'),
 ((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 
-'Vet Jack Harkness'), '2020-11-04');
-((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2019-01-24');
-((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-05-15');
-((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-02-27');
-((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-08-03');
-((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2020-05-24');
-((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Vet William Tatcher'), '2021-01-11');
+'Vet Jack Harkness'), '2020-11-04'),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2019-01-24'),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-05-15'),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-02-27'),
+((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Vet Maisy Smith'), '2020-08-03'),
+((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Vet Stephanie Mendez'), '2020-05-24'),
+((SELECT id FROM animals WHERE name = 'Agumon'), (SELECT id FROM vets WHERE name = 'Vet William Tatcher'), '2021-01-11');
 
