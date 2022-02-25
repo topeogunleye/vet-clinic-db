@@ -380,7 +380,7 @@ JOIN
 ON
   visits.vet_id = vets.id
 WHERE
-  vets.name = 'William Tatcher'
+  vets.name = 'Vet William Tatcher'
 ORDER BY
   visits.date_of_visit DESC
 LIMIT 1;  
@@ -399,7 +399,7 @@ JOIN
 ON
   visits.vet_id = vets.id
 WHERE
-  vets.name = 'Stephanie Mendez';
+  vets.name = 'Vet Stephanie Mendez';
 
 -- List all vets and their specialties, including vets with no specialties
 SELECT
@@ -430,7 +430,7 @@ JOIN
 ON
   visits.vet_id = vets.id
 WHERE
-  vets.name = 'Stephanie Mendez' AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+  vets.name = 'Vet Stephanie Mendez' AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
 
 -- What animal has the most visits to vets
 SELECT
@@ -464,7 +464,7 @@ JOIN
 ON
   visits.vet_id = vets.id
 WHERE
-  vets.name = 'Maisy Smith'
+  vets.name = 'Vet Maisy Smith'
 ORDER BY
   visits.date_of_visit ASC
 LIMIT 1;
@@ -512,3 +512,31 @@ WHERE
     WHERE
       animals.name = 'pokemon'
   );
+
+--  What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+SELECT
+  species.name
+FROM
+  animals
+JOIN
+  visits
+ON
+  animals.id = visits.animal_id
+JOIN
+  vets
+ON
+  visits.vet_id = vets.id
+JOIN
+  specializations
+ON
+  vets.id = specializations.vet_id
+JOIN
+  species
+ON
+  specializations.species_id = species.id
+WHERE
+  vets.name = 'Vet Maisy Smith'
+GROUP BY
+  species.name
+ORDER BY
+  COUNT(*) DESC LIMIT 1;
