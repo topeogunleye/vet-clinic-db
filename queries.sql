@@ -385,4 +385,19 @@ ORDER BY
   visits.date_of_visit DESC
 LIMIT 1;  
 
+-- How many different animals did Stephanie Mendez see?
+SELECT 
+  COUNT(DISTINCT animals.name) 
+FROM
+  animals 
+JOIN
+  visits
+ON
+  animals.id = visits.animal_id
+JOIN
+  vets
+ON
+  visits.vet_id = vets.id
+WHERE
+  vets.name = 'Stephanie Mendez';
 
