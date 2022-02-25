@@ -485,3 +485,30 @@ ON
   visits.vet_id = vets.id
 ORDER BY
   visits.date_of_visit DESC LIMIT 1;
+
+-- How many visits were with a vet that did not specialize in that animal's species?
+SELECT
+  COUNT(*)
+FROM
+  visits
+JOIN
+  vets
+ON
+  visits.vet_id = vets.id
+WHERE
+  vets.id NOT IN (
+    SELECT
+      vets.id
+    FROM
+      vets
+    JOIN
+      specializations
+    ON
+      vets.id = specializations.vet_id
+    JOIN
+      animals
+    ON
+      specializations.species_id = animals.species_id
+    WHERE
+      animals.name = 'pokemon'
+  );
