@@ -64,3 +64,15 @@ ADD COLUMN species_id INT REFERENCES species(id);
 ALTER TABLE animals
 ADD COLUMN owner_id INT REFERENCES owners(id);
 
+-- Create a table named vets with the following columns:
+-- id: integer (set it as autoincremented PRIMARY KEY)
+-- name: string
+-- age: integer
+-- date_of_graduation: date
+
+CREATE TABLE vets (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
+    name varchar(100) NOT NULL,
+    age INT NOT NULL,
+    date_of_graduation DATE NOT NULL   
+)
