@@ -401,3 +401,16 @@ ON
 WHERE
   vets.name = 'Stephanie Mendez';
 
+-- List all vets and their specialties, including vets with no specialties
+SELECT
+  vets.name, species.name AS specialty 
+FROM
+  vets
+JOIN
+  specializations 
+ON
+  vets.id = specializations.vet_id
+JOIN
+  species
+ON
+  specializations.species_id = species.id;
