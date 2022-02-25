@@ -70,22 +70,24 @@ ADD COLUMN owner_id INT REFERENCES owners(id);
 -- age: integer
 -- date_of_graduation: date
 
+DROP TABLE IF EXISTS vets;
 CREATE TABLE vets (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY NOT NULL,
     name varchar(100) NOT NULL,
     age INT NOT NULL,
     date_of_graduation DATE NOT NULL   
-)
+);
 
 -- There is a many-to-many relationship between the tables species and vets: a vet can specialize in multiple species, and a species can have multiple vets specialized in it. Create a "join table" called specializations to handle this relationship.
 
+DROP TABLE IF EXISTS specializations;
 CREATE TABLE specializations (
     vet_id INT REFERENCES vets(id),
     species_id INT REFERENCES species(id)
 );
-
 -- There is a many-to-many relationship between the tables animals and vets: an animal can visit multiple vets and one vet can be visited by multiple animals. Create a "join table" called visits to handle this relationship, it should also keep track of the date of the visit.
 
+DROP TABLE IF EXISTS visits;
 CREATE TABLE visits (
     animal_id INT REFERENCES animals(id),
     vet_id INT REFERENCES vets(id),
