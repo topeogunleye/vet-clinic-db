@@ -49,15 +49,7 @@ CREATE TABLE visits(
 -- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
--- -- Optimizations
--- Drop Column Vet ID
--- ALTER TABLE visits 
--- DROP COLUMN vet_id;
 
--- CREATE TABLE vet_id (
---     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
---     vet_id INT REFERENCES vet(id)
--- );
-
-
-CREATE INDEX animal_visit ON visits(animal_id ASC);
+CREATE INDEX animal_index ON visits(animal_id ASC);
+CREATE INDEX vet_index ON visits(vet_id ASC);
+CREATE INDEX email_index ON owners(email ASC);
