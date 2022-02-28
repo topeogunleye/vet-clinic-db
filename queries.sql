@@ -540,3 +540,6 @@ GROUP BY
   species.name
 ORDER BY
   COUNT(*) DESC LIMIT 1;
+
+
+EXPLAIN ANALYSE SELECT COUNT(*) FROM visits where animal_id = 4;
