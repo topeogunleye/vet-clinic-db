@@ -24,6 +24,9 @@ CREATE TABLE medical_histories (
   UNIQUE (patient_id),
   UNIQUE (treatment_id)
 );
+-- Add Index to Foreign Keys
+CREATE INDEX fk_patient_id_medical_histories ON medical_histories(patient_id);
+CREATE INDEX fk_treatment_id_medical_histories ON medical_histories(treatment_id);
 
 CREATE TABLE invoices (
   id INT GENERATED ALWAYS AS IDENTITY,
@@ -35,6 +38,8 @@ CREATE TABLE invoices (
   CONSTRAINT fk_medical_history_id FOREIGN KEY (fk_medical_history_id) REFERENCES medical_histories (patient_id),
   UNIQUE(fk_medical_history_id)
 );
+-- Add Index to foreign keys
+CREATE INDEX fk_medical_history_id_index ON invoices (fk_medical_history_id);
 
 CREATE TABLE invoice_items (
   id INT GENERATED ALWAYS AS IDENTITY,
@@ -48,4 +53,20 @@ CREATE TABLE invoice_items (
   UNIQUE(invoice_id, treatment_id)
 );
 
+-- Add index to foreign keys
+CREATE INDEX fk_invoice_id ON invoice_items (invoice_id);
+CREATE INDEX fk_treatment_id ON invoice_items (treatment_id);
 
+
+--  create a join table between medical_histories and treatments
+CREATE TABLE medical_histories_treatments (
+  medical_history_id BIGINT REFERENCES medical_histories(id),
+  treatment_id BIGINT REFERENCES treatments(id),
+  CONSTRAINT fk_medical_history_id FOREIGN KEY(medical_history_id) REFERENCES medical_histories(id),
+  CONSTRAINT fk_treatment_id FOREIGN KEY(treatment_id) REFERENCES treatments(id),
+  UNIQUE(medical_history_id, treatment_id)
+);
+
+-- ADD INDEX To Foreign Keys
+CREATE INDEX fk_medical_histories_treatments_medical_history_id_idx ON medical_histories_treatments (medical_history_id);
+CREATE INDEX fk_medical_histories_treatments_treatment_id_idx ON medical_histories_treatments (treatment_id);
